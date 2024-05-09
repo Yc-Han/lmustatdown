@@ -61,7 +61,6 @@
 \setlength{\headheight}{14.5pt}
 \setlength{\parindent}{0pt}
 \interfootnotelinepenalty = 10000
-\bibliographystyle{dcu}
 % Additional LaTeX parameters added in the YAML header of index.Rmd
 $for(header-includes)$
   $header-includes$
@@ -186,6 +185,16 @@ $body$
 
 % change rmd_files in `_bookdown.yml` files to determine order
 % note that references and appendix are also contained here.
+
+% ------------------------------------------------------------------------------
+% BIBLIOGRAPHY -----------------------------------------------------------------
+% ------------------------------------------------------------------------------
+
+\RaggedRight
+\bibliography{bib/references}
+\bibliographystyle{dcu}
+\newpage
+
 
 % ------------------------------------------------------------------------------
 % DECLARATION OF AUTHORSHIP-----------------------------------------------------
