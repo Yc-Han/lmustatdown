@@ -1,14 +1,14 @@
 ---
-title: 'My Final College Paper'
-author: 'Your R. Name'
+title: 'Abschlussarbeit'
+author: 'Your Name'
 date: 'May 20xx'
-institution: 'Reed College'
-division: 'Mathematics and Natural Sciences'
-advisor: 'Advisor F. Name'
+institution: 'Ludwig-Maximilians-University of Munich'
+division: 'Faculty 16: Informatik, Mathematik und Statistik'
+advisor: 'Advisor Name'
 # If you have more two advisors, un-silence line 7
 #altadvisor: 'Your Other Advisor'
-department: 'Mathematics'
-degree: 'Bachelor of Arts'
+department: 'Institute for Statistics'
+degree: 'Bachelor of Science'
 knit: bookdown::render_book
 site: bookdown::bookdown_site
 
@@ -17,18 +17,18 @@ site: bookdown::bookdown_site
 header-includes:
     - \usepackage{setspace}\onehalfspacing
 
-# This will automatically install the {remotes} package and {thesisdown}
+# This will automatically install the {remotes} package and {lmustatdown}
 # Change this to FALSE if you'd like to install them manually on your own.
 params:
-  'Install needed packages for {thesisdown}': True
+  'Install needed packages for {lmustatdown}': True
   
 # Remove the hashtag to specify which version of output you would like.
 # Can only choose one at a time.
 output:
-  thesisdown::thesis_pdf: default 
-#  thesisdown::thesis_gitbook: default         
-#  thesisdown::thesis_word: default
-#  thesisdown::thesis_epub: default
+  lmustatdown::thesis_pdf: default 
+#  lmustatdown::thesis_gitbook: default         
+#  lmustatdown::thesis_word: default
+#  lmustatdown::thesis_epub: default
 
 # If you are creating a PDF you'll need to write your preliminary content 
 # (e.g., abstract, acknowledgements) below or use code similar to line 25-26 
@@ -77,11 +77,11 @@ If you receive a duplicate label error after knitting, make sure to delete the i
 -->
 
 ```{r include_packages, include=FALSE}
-# This chunk ensures that the thesisdown package is
-# installed and loaded. This thesisdown package includes
+# This chunk ensures that the lmustatdown package is
+# installed and loaded. This lmustatdown package includes
 # the template files for the thesis.
 if (!require(remotes)) {
-  if (params$`Install needed packages for {thesisdown}`) {
+  if (params$`Install needed packages for {lmustatdown}`) {
     install.packages("remotes", repos = "https://cran.rstudio.com")
   } else {
     stop(
@@ -90,20 +90,20 @@ if (!require(remotes)) {
     )
   }
 }
-if (!require(thesisdown)) {
-  if (params$`Install needed packages for {thesisdown}`) {
-    remotes::install_github("ismayc/thesisdown")
+if (!require(lmustatdown)) {
+  if (params$`Install needed packages for {lmustatdown}`) {
+    remotes::install_github("Yc-Han/lmustatdown")
   } else {
     stop(
       paste(
         "You need to run",
-        'remotes::install_github("ismayc/thesisdown")',
+        'remotes::install_github("Yc-Han/lmustatdown")',
         "first in the Console."
       )
     )
   }
 }
-library(thesisdown)
+library(lmustatdown)
 # Set how wide the R output will go
 options(width = 70)
 ```

@@ -1,6 +1,6 @@
 # from https://github.com/rstudio/bookdown/blob/master/R/utils.R
 thesisdown_file <- function(...) {
-  system.file(..., package = 'thesisdown', mustWork = TRUE)
+  system.file(..., package = 'lmustatdown', mustWork = TRUE)
 }
 
 # from https://github.com/rstudio/bookdown/blob/master/R/skeleton.R

@@ -1,4 +1,4 @@
-Title: Thesis Project using thesisdown
-Binding: thesisdown_skeleton
+Title: Thesis Project using lmustatdown
+Binding: lmustatdown_skeleton
 OpenFiles: index.Rmd
 Icon: graduation_cap.png
