@@ -34,6 +34,8 @@ knit: "bookdown::render_book"
 output: 
   lmustatdown::thesis_pdf  
 space_between_paragraphs: true       # if you want spaces bt paragraph
+# header-includes:     # if including additional latex packages or commands
+  # - \setlength{\parindent}{17pt}
 ---
 
 <!--
