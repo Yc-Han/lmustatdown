@@ -1,15 +1,16 @@
-Package: thesisdown
-Title: An updated R Markdown thesis template using the bookdown package
-Version: 0.2.0.9000
+Package: lmustatdown
+Title: An updated R Markdown thesis template using the bookdown package for LMU Munich, Department of Statistics
+Version: 0.1.0
 Authors@R: c(
+    person("Yichen", "Han", email = "yichen.han@campus.lmu.de", role = c("aut"))
     person("Chester", "Ismay", email = "chester.ismay@gmail.com", role = c("cre", "aut")),
     person("Nick", "Solomon", email = "nick@nicksolomon.me", role = "aut"),
     person("Shir", "Dekel", email = "shirdekel@yahoo.com.au", role = "ctb"))
 Description: Using the bookdown package and LaTeX and Word thesis templates from
-    Reed College, this package aims to encourage reproducible research using
+    LMU Munich, this package aims to encourage reproducible research using
     simple Markdown syntax while embedding all of the R code to produce plots
     and analyses as well.
-Maintainer: Chester Ismay <chester.ismay@gmail.com>
+Maintainer: Yichen Han <yichen.han@campus.lmu.de>
 Depends:
     R (>= 3.2.0)
 Imports: 
