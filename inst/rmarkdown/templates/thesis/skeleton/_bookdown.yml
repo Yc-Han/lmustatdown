@@ -1,8 +1,13 @@
 book_filename: "thesis"
-chapter_name: "Chapter "
-download: [
-    ["thesis.pdf", "PDF"],
-    ["thesis.epub", "EPUB"],
-    ["thesis.docx", "Word"]
+rmd_files: ["index.Rmd",
+  "sections/01-intro.Rmd",
+  "sections/02-method.Rmd",
+  "sections/03-data.Rmd",
+  "sections/04-results.Rmd",
+  "sections/05-conclusion.Rmd",
+  "sections/98-references.Rmd",
+  "sections/99-appendix.Rmd"
   ]
+output_dir: "thesis-output"
+download: ["thesis.pdf", "PDF"]
 delete_merged_file: true

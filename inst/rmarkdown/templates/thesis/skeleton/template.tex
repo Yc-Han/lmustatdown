@@ -1,19 +1,27 @@
-\documentclass[12pt]{article}
+% This is the LMU Munich LaTeX template, optimized for R Markdown.
 
+% -------------------------------
+% --- PREAMBLE ---
+% -------------------------------
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage[]{graphicx}
+\usepackage[round, comma]{natbib}               % literature reference style
+\usepackage[bf]{caption}
+\usepackage{textcomp}                           % For single quotes
+\usepackage{floatrow}                           % For image and table position
+\usepackage{booktabs}                           % For tables
+% \usepackage[colorlinks=true]{hyperref}
+% \usepackage[bottom]{footmisc}
+\usepackage[bottom, flushmargin]{footmisc}      % For footnotes
+\usepackage[citebordercolor={0 1 0}]{hyperref}  % For creating hyperlinks in cross references
+\usepackage{footnotebackref}
 \usepackage[]{color}
 \usepackage{alltt}
-
-\newcommand{\mytitle}{My Super Fancy Thesis Title}
-\newcommand{\myname}{Jane Doe}
-\newcommand{\mysupervisor}{Dr Dre}
-
-\usepackage[a4paper, width = 160mm, top = 35mm, bottom = 30mm,
-bindingoffset = 0mm]{geometry}
+\usepackage[a4paper, width = 160mm, top = 35mm, bottom = 30mm, bindingoffset = 0mm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{ragged2e}
 \usepackage{xcolor}
-\usepackage[round, comma]{natbib}
 \usepackage{fancyhdr}
 \newcommand{\changefont}{%
     \fontsize{8}{11}\selectfont
@@ -24,6 +32,16 @@ bindingoffset = 0mm]{geometry}
   linkcolor = black,
   urlcolor = black,
   citecolor = black}
+
+% save thesis parameters for later
+\newcommand{\mytitle}{$title$}
+\newcommand{\thesistype}{$type$}
+\newcommand{\thesisauthor}{$author$}
+\newcommand{\thesisdate}{$date$}
+
+% -------------------------------
+% --- PAGE FORMAT ---
+% -------------------------------
 \pagestyle{fancy}
 \fancyhead{}
 \fancyhead[R]{\changefont{\mytitle}}
@@ -32,6 +50,11 @@ bindingoffset = 0mm]{geometry}
 \setlength{\headheight}{14.5pt}
 \setlength{\parindent}{0pt}
 \interfootnotelinepenalty = 10000
+
+% Additional LaTeX parameters added in the YAML header of index.Rmd
+$for(header-includes)$
+  $header-includes$
+$endfor$
 
 % ------------------------------------------------------------------------------
 % MAIN -------------------------------------------------------------------------
@@ -45,7 +68,7 @@ bindingoffset = 0mm]{geometry}
 \begin{center}
 
 \LARGE
-Master's Thesis
+$type$
 
 \vspace{0.5cm}
 
@@ -57,18 +80,18 @@ Master's Thesis
 \vspace{0.5cm}
 
 \large
-Department of Statistics \\
-Ludwig-Maximilians-Universität München
+$chair$ \\
+$university$
 
 \vfill
 
 \Large
-\textbf{\myname}
+\textbf{$author$}
 
 \vfill
 
 \large
-Munich, Month Day\textsuperscript{th}, Year
+Munich, $date$
 
 \vfill
 
@@ -77,10 +100,10 @@ Munich, Month Day\textsuperscript{th}, Year
 \vfill
 
 \normalsize
-Submitted in partial fulfillment of the requirements for the degree of M. Sc.
+Submitted in partial fulfillment of the requirements for the degree of B.Sc./M. Sc.
 \\
 
-Supervised by \mysupervisor
+Supervised by $advisor1$
 
 \end{center}
 \end{titlepage}
@@ -90,73 +113,68 @@ Supervised by \mysupervisor
 \pagenumbering{Roman}
 \newpage
 
-\begin{abstract}
+% ------------------------------------
+% --- frontmatter: Acknowledgement ---
+% ------------------------------------
+$if(acknowledge)$
+\newpage
+$acknowledge$
+$endif$
+\pagestyle{plain}
+\pagenumbering{roman}   % define page number in roman style
+\setcounter{page}{1}    % start page numbering
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum.
+% -----------------------------
+% --- frontmatter: Abstract ---
+% -----------------------------
+\newpage
+$abstract$
 
-\end{abstract}
-
+% -----------------------------
+% --- frontmatter: Contents ---
+% -----------------------------
 \newpage
 \tableofcontents
+\clearpage
 
-%%%% if you would want to include material overview
-%%%% use one of the following in addition
-% \newpage
-% \listoffigures
-% \newpage
-% \listoftables
+% ----------------------------------------------------------
+% --- frontmatter: List of Abbreviations (not mandatory) ---
+% ----------------------------------------------------------
+$if(abbreviations)$
 \newpage
+$abbreviations$
+$endif$
 
-% CHAPTERS ---------------------------------------------------------------------
-
-\pagenumbering{arabic}
-
-\section{Introduction}
-\label{intro}
-\input{chapters/introduction}
+% ----------------------------------------------------
+% --- frontmatter: List of Figures (not mandatory) ---
+% ----------------------------------------------------
+$if(lof)$
 \newpage
+\listoffigures
+\addcontentsline{toc}{section}{List of Figures}
+$endif$
 
-\section{Conclusion}
-\label{conclusion}
-\input{chapters/conclusion}
-
+% ---------------------------------------------------
+% --- frontmatter: List of Tables (not mandatory) ---
+% ---------------------------------------------------
+$if(lot)$
 \newpage
+\listoftables
+\addcontentsline{toc}{section}{List of Tables}
+$endif$
 
-% ------------------------------------------------------------------------------
-% APPENDIX ---------------------------------------------------------------------
-% ------------------------------------------------------------------------------
-
-\pagenumbering{Roman}
-
-\setcounter{page}{5} % CHANGE
-
-\appendix
-
-\section{Appendix}
-\label{app}
-\input{chapters/appendix}
+% -------------------------------
+% --- main body of the thesis ---
+% -------------------------------
 \newpage
+\pagestyle{plain}
+\setcounter{page}{1}    % start page numbering anew
+\pagenumbering{arabic}  % page numbers in arabic style
 
-\section{Electronic appendix}
-\label{el_app}
+$body$
 
-Data, code and figures are provided in electronic form.
-
-\newpage
-
-% ------------------------------------------------------------------------------
-% BIBLIOGRAPHY -----------------------------------------------------------------
-% ------------------------------------------------------------------------------
-
-\RaggedRight
-\bibliography{bibliography}
-\bibliographystyle{dcu}
-\newpage
+% change rmd_files in `_bookdown.yml` files to determine order
+% note that references and appendix are also contained here.
 
 % ------------------------------------------------------------------------------
 % DECLARATION OF AUTHORSHIP-----------------------------------------------------
@@ -181,13 +199,13 @@ previously presented to another examination board and has not been published.
 \\
 
 \vspace{1cm}
-\textcolor{orange}{Location, date} \\
+\textcolor{orange}{Munich, $date$} \\
 
 \vspace{3cm}
 
 \noindent\rule{0.5\textwidth}{0.4pt} \\
 
-\textcolor{orange}{Name}
+\textcolor{orange}{$author$}
 
 % ------------------------------------------------------------------------------
 
