@@ -2,7 +2,7 @@ Package: lmustatdown
 Title: An updated R Markdown thesis template using the bookdown package for LMU Munich, Department of Statistics
 Version: 0.1.0
 Authors@R: c(
-    person("Yichen", "Han", email = "yichen.han@campus.lmu.de", role = c("aut"))
+    person("Yichen", "Han", email = "yichen.han@campus.lmu.de", role = c("aut")),
     person("Chester", "Ismay", email = "chester.ismay@gmail.com", role = c("cre", "aut")),
     person("Nick", "Solomon", email = "nick@nicksolomon.me", role = "aut"),
     person("Shir", "Dekel", email = "shirdekel@yahoo.com.au", role = "ctb"))
