@@ -77,7 +77,8 @@ everything below this.
 Welcome to the thesis template. This template is based on (and in many places 
 copied directly from) the HU Berlin School of Business and Economics LaTeX 
 template, but hopefully it will provide a nicer interface for those that have
-never used LaTeX before. 
+never used LaTeX before.  
+**Note that this file must be saved as `index.Rmd`.**  
 
 ## Why use R Markdown? {-}
 
@@ -90,3 +91,8 @@ visualize it using **R** functions, and also to provide the documentation and
 commentary on the results of your project. Using _R Markdown_ will also allow
 you to easily keep track of your analyses in **R** chunks of code, with the 
 resulting plots and output included as well.
+
+Examples for _R Markdown_ formatting of citations, cross-references, maths 
+equations, etc. can be found in the `/sections` folder.  
+An example bibliography file used for the references is in the `\bib` folder.
+
