@@ -22,6 +22,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{ragged2e}
 \usepackage{xcolor}
+\definecolor{LMUgreen}{RGB}{0, 136, 58}
 \usepackage{fancyhdr}
 \newcommand{\changefont}{%
     \fontsize{8}{11}\selectfont
@@ -29,8 +30,8 @@
 \usepackage{hyperref}
 \hypersetup{
   colorlinks = true,
-  linkcolor = black,
-  urlcolor = black,
+  linkcolor = gray,
+  urlcolor = gray,
   citecolor = black}
 
 % save thesis parameters for later
@@ -75,8 +76,9 @@ $endfor$
 % FRONT PAGE -------------------------------------------------------------------
 
 \begin{titlepage}
+\pagecolor{LMUgreen}
 \begin{center}
-
+\color{white}
 \LARGE
 $type$
 
@@ -110,10 +112,11 @@ Submitted in partial fulfillment of the requirements for the degree of B.Sc./M. 
 Supervised by $advisor1$
 
 \end{center}
+\color{black}
 \end{titlepage}
 
 % CONTENTS ---------------------------------------------------------------------
-
+\pagecolor{white}
 \pagenumbering{Roman}
 \newpage
 
@@ -203,12 +206,12 @@ $body$
 
 I hereby declare that the report submitted is my own unaided work. All direct
 or indirect sources used are acknowledged as references. I am aware that the
-Thesis in digital form can be examined for the use of unauthorized aid and in
+thesis in digital form can be examined for the use of unauthorized aid and in
 order to determine whether the report as a whole or parts incorporated in it may
 be deemed as plagiarism. For the comparison of my work with existing sources I
 agree that it shall be entered in a database where it shall also remain after
-examination, to enable comparison with future Theses submitted. Further rights
-of reproduction and usage, however, are not granted here. This paper was not
+examination, to enable comparison with future theses submitted. Further rights
+of reproduction and usage, however, are not granted here. This work was not
 previously presented to another examination board and has not been published.
 \\
 

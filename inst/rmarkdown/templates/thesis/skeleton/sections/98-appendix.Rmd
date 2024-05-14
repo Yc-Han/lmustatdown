@@ -3,11 +3,17 @@
 
 Here goes the appendix!
 
-## Figures
+## Code Supplement
+
+A code and data supplement for this work is available at [my URL](https:\\bla.com\bla).
+It contains the following files and folders:
+
+
+## Additional Figures
 
 Put a figure
 
-## Tables
+## Additional Tables
 
 \begin{table}[ht]
     \begin{center}
