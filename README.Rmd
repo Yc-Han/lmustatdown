@@ -4,6 +4,16 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd via `devtools::build_readme()`. Please edit README.Rmd -->
 
+<!-- Include HTML for custom styling -->
+<style>
+  h1, h2, h3, h4, h5, h6 {
+    color: rgb(0, 136, 58);
+  }
+  a {
+    color: rgb(0, 136, 58);
+  }
+</style>
+
 # lmustatdown 
 
 The `lmustatdown` package provides a handy
@@ -46,8 +56,8 @@ devtools::install_github("Yc-Han/lmustatdown")
 ```
 3. Create a New R Markdown document in RStudio:
 
-File -> New File -> R Markdown... then choose 'From template', then choose
-'Thesis \{lmustatdown\}", and enter `index` as the **Name**. Note that this will currently
+File -> New File -> R Markdown... then choose `From template`, then choose
+`Thesis \{lmustatdown\}`, and enter `index` as the **Name**. Note that this will currently
 ONLY be able to **Knit** if you name the directory `index` at this step.
 
 <p align="center">
