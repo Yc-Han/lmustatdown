@@ -5,16 +5,8 @@ output: github_document
 <!-- README.md is generated from README.Rmd via `devtools::build_readme()`. Please edit README.Rmd -->
 
 <!-- Include HTML for custom styling -->
-<style>
-  h1, h2, h3, h4, h5, h6 {
-    color: rgb(0, 136, 58);
-  }
-  a {
-    color: rgb(0, 136, 58);
-  }
-</style>
 
-# lmustatdown 
+# <span style="color: rgb(0, 136, 58);">lmustatdown</span>
 
 The `lmustatdown` package provides a handy
 template for writing a dissertation or Bachelor's/ Master's Thesis at the
@@ -36,9 +28,9 @@ tutorial](https://bookdown.org/yihui/bookdown/).
 
 An example of the output can be seen [here](thesis-example.pdf).
 
-## Usage
+## <span style="color: rgb(0, 136, 58);">Usage</span>
 
-### Initial Setup
+### <span style="color: rgb(0, 136, 58);">Initial Setup</span>
 
 1. To install the template, be sure you have the following:
     - [pandoc](http://pandoc.org/)
@@ -71,7 +63,7 @@ following code:
 rmarkdown::draft("index.Rmd", template = "thesis", package = "lmustatdown")
 ```
 
-### Rendering
+### <span style="color: rgb(0, 136, 58);">Rendering</span>
 
 To render your thesis, you can open `index.Rmd` in RStudio and then hit the
 "knit" button. Alternatively, you can use:
@@ -82,12 +74,12 @@ rmarkdown::render("index.Rmd")
 
 Your thesis will be deposited in the `thesis-output/` directory.
 
-## Writing Thesis
+## <span style="color: rgb(0, 136, 58);">Writing Thesis</span>
 
 The following describes the components in the template. Getting familiar with
 these files will guide you in writing your thesis.
 
-### `index.Rmd`
+### <span style="color: rgb(0, 136, 58);">`index.Rmd`</span>
 
 This file is first created when generating a new template. It contains all the
 relevant meta-information (e.g. name, thesis title, advisor names). You will
@@ -97,7 +89,7 @@ familiar with the YAML header, you can also add additional LaTeX parameters or
 decide whether you want to add optional pages to your thesis such as the
 "Acknowledgements" section or the "List of Tables".
 
-### `_bookdown.yml`
+### <span style="color: rgb(0, 136, 58);">`_bookdown.yml`</span>
 
 This is the main configuration file for your thesis. It determines what Rmd
 files are included in the output, and in what order. Arrange the order of your
@@ -106,7 +98,7 @@ The first file should always be the `index.Rmd` file. The rest will be the files
 that you create. Some example files are already included to help you along your
 way.
 
-### `sections/`
+### <span style="color: rgb(0, 136, 58);">`sections/`</span>
 
 These are the sections or chapters that will be bound together in the final
 render. Here's where you write the sections that make your thesis. You can name
@@ -117,18 +109,18 @@ In your day-to-day writing, you will be working with these files. You can write
 in markdown, just like you would in R Markdown. You can also write in LaTeX syntax if
 you prefer.
 
-### `bib/`
+### <span style="color: rgb(0, 136, 58);">`bib/`</span>
 
 Store your bibliography (as `bibtex` files) here.
 [This website](http://bibdesk.sourceforge.net/) may be helpful in generating the
 `bibtex` file in the correct format. You will need to cite the items in your thesis after
 adding them to the `references.bib` file in order for them to appear in your bibliography.
 
-### `figures/` and `data/`
+### <span style="color: rgb(0, 136, 58);">`figures/` and `data/`</span>
 
 Store your figures and data here and reference them in your R Markdown files.
 
-## Structure of Thesis (Default)
+## <span style="color: rgb(0, 136, 58);">Structure of Thesis (Default)</span>
 
 The structure of the thesis template is as follows:
 
