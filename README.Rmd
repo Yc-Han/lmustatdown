@@ -4,7 +4,7 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd via `devtools::build_readme()`. Please edit README.Rmd -->
 
-# lmustatdown <img src="sigillum.png" align="right" width="128px"/>
+# lmustatdown 
 
 The `lmustatdown` package provides a handy
 template for writing a dissertation or Bachelor's/ Master's Thesis at the

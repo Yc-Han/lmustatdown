@@ -9,14 +9,15 @@ matriculation_number: "Matriculation Number Here"
 date: "dd.mm.yyyy"
 university: "Ludwig-Maximilians-Universität München"
 institute: "Fakultät für Mathematik, Informatik und Statistik" 
-chair: "Department of Statistics"
+chair: "Institut für Statistik"
 advisor1: "Prof. Dr. Essor Person"
 # advisor2: "Prof. Dr. Rosse Nosrep"         
-program: "Bachelor of Science in Statistics and Data Science"
+program: "Bachelor-Studiengang Statistik und Data Science"
+#        "Master of Science in Statistics and Data Science  
 #
 # Optional Information --------------------------------------------------------
-# comment out if unnecessary
-chair2: "Chair of Biostatistics"
+# uncomment if necessary
+# chair2: "Chair of Biostatistics"
 abstract: |  
   `r if(knitr:::is_latex_output()) paste(readLines("prelim/00-abstract.Rmd"), collapse = '\n  ')`
 acknowledge: |  
@@ -34,8 +35,10 @@ knit: "bookdown::render_book"
 output: 
   lmustatdown::thesis_pdf  
 space_between_paragraphs: true       # if you want spaces bt paragraph
-# header-includes:     # if including additional latex packages or commands
+# header-includes:     # if including additional latex packages, commands or files
   # - \setlength{\parindent}{17pt}
+  # - \usepackage{mathtools}
+  # - \input{./prelim/my-command-definitions.tex}
 ---
 
 <!--
@@ -78,7 +81,7 @@ Welcome to the thesis template. This template is based on (and in many places
 copied directly from) the HU Berlin School of Business and Economics LaTeX 
 template, but hopefully it will provide a nicer interface for those that have
 never used LaTeX before.  
-**Note that this file must be saved as `index.Rmd`.**  
+**Note that this source file must be saved as `index.Rmd`.**  
 
 ## Why use R Markdown? {-}
 
