@@ -78,7 +78,7 @@ Welcome to the thesis template. This template is based on (and in many places
 copied directly from) the HU Berlin School of Business and Economics LaTeX 
 template, but hopefully it will provide a nicer interface for those that have
 never used LaTeX before.  
-**Note that this file must be saved as `index.Rmd`.**  
+**Note that this source file must be saved as `index.Rmd`.**  
 
 ## Why use R Markdown? {-}
 
